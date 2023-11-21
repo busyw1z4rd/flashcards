@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Flashcard Game</title>
+</head>
+<body>
+  <div class="flashcard-container">
+    <div class="flashcard" onclick="flipCard(this)">
+      <div class="card-content">
+        <div class="card-front">
+          <p class="front-text">Question</p>
+        </div>
+        <div class="card-back">
+          <p class="back-text">Definition</p>
+          <p class="example-text">Example Sentence</p>
+        </div>
+      </div>
+    </div>
+    <div class="navigation-buttons">
+      <button onclick="prevCard()">Previous</button>
+      <button onclick="nextCard()">Next</button>
+    </div>
+  </div>
+
+  <!-- Form for adding new words -->
+  <div class="add-word-form">
+    <h2>Add a New Word</h2>
+    <form onsubmit="addNewWord(event)">
+      <label for="wordInput">Word:</label>
+      <input type="text" id="wordInput" required>
+
+      <label for="definitionInput">Definition(s):</label>
+      <textarea id="definitionInput" required></textarea>
+
+      <label for="exampleInput">Example Sentence(s):</label>
+      <textarea id="exampleInput" required></textarea>
+
+      <button type="submit">Add Word</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
